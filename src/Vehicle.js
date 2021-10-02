@@ -49,6 +49,7 @@ const Vehicle = () => {
                                 <td>Vehicle Brand</td>
                                 <td>Name</td>
                                 <td>Vehicle Type</td>
+                                <td>Image</td>
                             </tr>
                         </thead>
                     {data?data?.map((val)=>{
@@ -60,6 +61,7 @@ const Vehicle = () => {
                                    <td>{val.vehicleBrandId}</td>
                                    <td>{val.name}</td>
                                    <td>{val.vehicleType}</td>
+                                   <td><img src={val.imageUrl} width="80px"/></td>
                                    <button onClick={(e)=>onUpdate(e,val)} className="btn btn-warning">Update</button>
                                </tr>
                               
