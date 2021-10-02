@@ -51,7 +51,7 @@ const Vehicle = () => {
                                 <td>Vehicle Type</td>
                             </tr>
                         </thead>
-                    {data?.map((val)=>{
+                    {data?data?.map((val)=>{
                         return (
                             <>
                            <tbody>
@@ -67,7 +67,9 @@ const Vehicle = () => {
                                <br/>
                             </>
                         )
-                    })}
+                    }):<h3 className="text-center" style={{marginTop:"5%"}}>Loading... Hang On!!</h3>
+
+                }
                      </table>
                 </div>
                 {modal?<UpdateForm val={value} handle={handler}/>:null}
